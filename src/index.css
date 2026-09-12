@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hermes-bg: #0a0e17;
+  --color-hermes-surface: #111827;
+  --color-hermes-card: #1a2235;
+  --color-hermes-border: #2a3548;
+  --color-hermes-accent: #3b82f6;
+  --color-hermes-green: #10b981;
+  --color-hermes-red: #ef4444;
+  --color-hermes-yellow: #f59e0b;
+  --color-hermes-purple: #8b5cf6;
+  --color-hermes-cyan: #06b6d4;
+  --color-hermes-orange: #f97316;
+  --color-hermes-text: #e5e7eb;
+  --color-hermes-muted: #9ca3af;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0e17;
+  color: #e5e7eb;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3548;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
